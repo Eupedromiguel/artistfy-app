@@ -22,7 +22,7 @@ A aplicação foi projetada com foco em:
 - Respeito aos limites da Spotify API
 - Boa experiência do usuário
 
-=========================================================
+-------------------------------------------------------------------------------------------------------------------------------
 
 ## Stack
 
@@ -33,6 +33,7 @@ Gráficos: Recharts
 Exportação: xlsx para Excel + PDF (Tudo no front)
 Deploy: Vercel (frontend) + Vercel functions (backend)
 
+``` txt
 artistfy/
 ├── frontend/                    # Aplicação React
 │   ├── public/
@@ -117,6 +118,7 @@ artistfy/
 ├── README.md                   # Documento de design atual
 ├── package.json                # Root package.json (scripts principais)
 └── vercel.json                 # Configuração do Vercel
+```
 
 **Detalhes importantes** 
 
@@ -147,7 +149,7 @@ Vantagens desta estrutura:
 - Pronta para deploy no Vercel
 - Fácil navegação e manutenção
 
-=========================================================
+-------------------------------------------------------------------------------------------------------------------------------
 
 ## Fluxo do App
 
@@ -242,7 +244,7 @@ Ao rolar até o último albúm exibe os botões
 
 "Deseja exportar em PDF os albuns a seguir exibidos ? {$X} Albuns carregados"
 
-=========================================================
+-------------------------------------------------------------------------------------------------------------------------------
 
 ## Spotify API nesse fluxo
 
@@ -277,7 +279,7 @@ _________________________________________________________
 - Endpoints separados evitam timeout (limite de 10s no Vercel free tier)
 - Progressive loading: dados aparecem gradualmente (melhor UX)
 
-=========================================================
+-------------------------------------------------------------------------------------------------------------------------------
 
 ## Backend Vercel (Functions)
 
@@ -296,7 +298,7 @@ Cada endpoint vira uma função:
 
 Backend só entrega JSON estruturado
 
-=========================================================
+-------------------------------------------------------------------------------------------------------------------------------
 
 ## Limites reais 
 
@@ -316,7 +318,7 @@ Busca + relatórios públicos = tranquilo
 
 Um app desse tipo vai demorar muito para bater limites.
 
-=========================================================
+-------------------------------------------------------------------------------------------------------------------------------
 
 ## Otimizações Implementadas
 
@@ -413,13 +415,17 @@ Vercel:
 
 Tudo conversa bem.
 
-=========================================================
+-------------------------------------------------------------------------------------------------------------------------------
 
 # Documentação Disponível
 
 QUICK_START.md - Guia de início rápido
+
 CHECKLIST.md - Checklist de verificação
+
 PROJECT_SUMMARY.md - Resumo completo
+
 docs/API.md - Documentação da API
+
 docs/DEPLOYMENT.md - Guia de deploy
 
