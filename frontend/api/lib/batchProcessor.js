@@ -1,4 +1,4 @@
-const { spotifyRequest } = require('./spotify');
+import { spotifyRequest } from './spotify.js';
 
 /**
  * Busca informações de múltiplos álbuns em batch (até 20 por vez)
@@ -82,7 +82,7 @@ async function enrichTracksWithLabels(tracks) {
   });
 }
 
-module.exports = {
+export {
   fetchAlbumsBatch,
   enrichTracksWithLabels
 };

@@ -1,6 +1,6 @@
-const { spotifyRequest } = require('./lib/spotify.cjs');
-const { fetchAlbumsBatch } = require('./lib/batchProcessor');
-const { handleError, validateParams } = require('./lib/errorHandler.cjs');
+import { spotifyRequest } from './lib/spotify.js';
+import { fetchAlbumsBatch } from './lib/batchProcessor.js';
+import { handleError, validateParams } from './lib/errorHandler.js';
 
 /**
  * GET /api/artist-albums

@@ -1,6 +1,14 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+// Importa as funções serverless
+import searchArtist from './frontend/api/search-artist.js';
+import artist from './frontend/api/artist.js';
+import artistTracks from './frontend/api/artist-tracks.js';
+import artistAlbums from './frontend/api/artist-albums.js';
+
+dotenv.config();
 
 const app = express();
 const PORT = 5000;
@@ -10,16 +18,10 @@ app.use(cors());
 app.use(express.json());
 
 // Aumenta o limite de headers
-app.use((req, res, next) => {
+app.use((req, _res, next) => {
   req.setMaxListeners(20);
   next();
 });
-
-// Importa as funções serverless
-const searchArtist = require('./frontend/api/search-artist.cjs');
-const artist = require('./frontend/api/artist.cjs');
-const artistTracks = require('./frontend/api/artist-tracks.cjs');
-const artistAlbums = require('./frontend/api/artist-albums.cjs');
 
 // Adapta as funções serverless para Express
 const adaptVercelFunction = (handler) => async (req, res) => {
