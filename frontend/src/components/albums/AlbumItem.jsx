@@ -24,7 +24,7 @@ export default function AlbumItem({ album, index }) {
                 href={album.external_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-spotify-green hover:text-spotify-violet text-sm"
+                className="text-white hover:text-spotify-violet text-sm"
               >
                 Spotify
               </a>

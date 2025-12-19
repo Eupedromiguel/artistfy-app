@@ -31,7 +31,7 @@ export default function TrackItem({ track, index }) {
               href={track.external_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-spotify-green hover:text-green-400 text-sm"
+              className="text-white hover:text-spotify-violet text-sm"
             >
               Spotify
             </a>
