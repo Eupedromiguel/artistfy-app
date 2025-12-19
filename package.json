@@ -7,7 +7,7 @@
     "dev:api": "node server.js",
     "dev:api:vercel": "cross-env NODE_OPTIONS=\"--max-http-header-size=16384\" vercel dev --listen 5000 --yes",
     "dev:frontend": "cd frontend && npm run dev",
-    "build": "cd frontend && npm run build",
+    "build": "cd frontend && npm install && npm run build && cd .. && node copy-build.js",
     "install:all": "npm install && cd frontend && npm install"
   },
   "keywords": [

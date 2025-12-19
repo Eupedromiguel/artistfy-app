@@ -12,6 +12,7 @@ dist/
 build/
 frontend/dist/
 frontend/build/
+public/
 
 # Logs
 *.log
