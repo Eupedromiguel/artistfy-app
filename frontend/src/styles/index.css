@@ -24,4 +24,17 @@
   .card {
     @apply bg-spotify-gray rounded-lg p-6 hover:bg-opacity-80 transition-all duration-200;
   }
+
+  .artist-card {
+    @apply bg-spotify-gray rounded-lg p-4 transition-all duration-300 cursor-pointer;
+    @apply hover:scale-105 hover:shadow-2xl hover:shadow-spotify-violet/20;
+  }
+
+  .artist-card img {
+    @apply transition-transform duration-300;
+  }
+
+  .artist-card:hover img {
+    @apply scale-105;
+  }
 }

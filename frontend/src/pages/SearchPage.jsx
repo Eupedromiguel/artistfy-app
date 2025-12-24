@@ -74,7 +74,7 @@ export default function SearchPage() {
               <button
                 key={artist.id}
                 onClick={() => handleSelectArtist(artist.id)}
-                className="card cursor-pointer text-left"
+                className="artist-card text-left"
               >
                 {artist.image && (
                   <img
