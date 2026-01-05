@@ -1,17 +1,8 @@
 {
-  "headers": [
+  "rewrites": [
     {
-      "source": "/(favicon.svg|favicon.ico|icon-192.png|apple-touch-icon.png)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        },
-        {
-          "key": "Content-Type",
-          "value": "image/svg+xml"
-        }
-      ]
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
