@@ -53,7 +53,7 @@ export default function HowToUsePage() {
 
           <div className="bg-spotify-green bg-opacity-10 border border-spotify-green rounded-lg p-4 mt-4">
             <p className="text-spotify-green text-sm font-semibold mb-2">
-              Por que algumas músicas populares não aparecem na discografia?
+              Por que algumas músicas populares não aparecem em albúns ou faixas?
             </p>
             <p className="text-gray-300 text-sm">
               Isso acontece porque a API do Spotify diferencia entre:
@@ -64,7 +64,7 @@ export default function HowToUsePage() {
               <li><strong>Aparece em:</strong> Participações em trabalhos de outros artistas</li>
             </ul>
             <p className="text-gray-400 text-xs mt-2 italic">
-              Portanto, se uma música popular não está nos álbuns, verifique a seção "Aparece em" - ela pode ser uma participação em um álbum de outro artista.
+              Portanto, se uma música popular não está nos álbuns ou faixas, verifique a seção "Aparece em" - ela pode ser uma participação em um álbum de outro artista.
             </p>
           </div>
         </section>

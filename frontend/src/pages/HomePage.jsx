@@ -14,16 +14,23 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-200px)] flex flex-col items-center justify-center px-4">
-      <div className="text-center mb-12">
+    <div className="relative min-h-[calc(100vh-200px)] flex flex-col items-center justify-center px-4">
+      {/* Background Image com blur e opacidade */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/img-bg.png)',
+          filter: 'blur(8px)',
+          opacity: 0.2,
+          zIndex: -1
+        }}
+      />
+
+      <div className="text-center mb-12 relative z-10">
         <div className="flex justify-center mb-4">
-          <img
-            src={principalIcon}
-            alt="Ícone principal"
-            className="w-20 h-20 transition-transform duration-500 hover:scale-125 hover:rotate-12"
-          />
+          
         </div>
-        <h1 className="text-6xl font-bold text-spotify-violet mb-4">
+        <h1 className="text-6xl text-spotify-violet mb-4">
           artistFy
         </h1>
         <p className="text-xl text-gray-400 mb-2">
@@ -34,9 +41,11 @@ export default function HomePage() {
         </p>
       </div>
 
-      <SearchBar onSearch={handleSearch} />
+      <div className="relative z-10">
+        <SearchBar onSearch={handleSearch} />
+      </div>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl relative z-10">
         <div className="text-center">
           <div className="mb-2 flex justify-center">
             <img
