@@ -12,14 +12,14 @@ export default function SearchBar({ onSearch, placeholder = MESSAGES.SEARCH_PLAC
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl">
-      <div className="flex gap-2">
+    <form onSubmit={handleSubmit} className="w-full max-w-4xl">
+      <div className="flex gap-3">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="flex-1 px-6 py-3 rounded-full bg-spotify-gray text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-spotify-green"
+          className="flex-1 px-8 py-4 text-lg rounded-full bg-spotify-gray text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-spotify-green"
         />
         <button
           type="submit"

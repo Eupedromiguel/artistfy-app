@@ -4,7 +4,6 @@ import { MESSAGES } from '../utils/constants';
 import searchIcon from '../components/icons/icons8-pesquisar-100.png';
 import audioIcon from '../components/icons/icons8-audiolivro-100.png';
 import downloadIcon from '../components/icons/icons8-bloco-de-anotações-100.png';
-import principalIcon from '../components/icons/icons8-bloco-de-anotações-principal.png';
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -15,22 +14,34 @@ export default function HomePage() {
 
   return (
     <div className="relative min-h-[calc(100vh-200px)] flex flex-col items-center justify-center px-4">
-      {/* Background Image com blur e opacidade */}
+      {/* Background: imagem com blur */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/img-bg.png)',
-          filter: 'blur(8px)',
-          opacity: 0.2,
-          zIndex: -1
+          backgroundImage: 'url(/img-bg.PNG)',
+          filter: 'blur(7px)',
+          opacity: 1,
+          zIndex: -2,
+          top: '-10%',
+          bottom: '-20%',
+          left: 0,
+          right: 0,
+          backgroundSize: 'cover',
+        }}
+      />
+
+      {/* Overlay: gradiente suave */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 30%, transparent 100%)',
+          zIndex: -1,
         }}
       />
 
       <div className="text-center mb-12 relative z-10">
-        <div className="flex justify-center mb-4">
-          
-        </div>
-        <h1 className="text-6xl text-spotify-violet mb-4">
+        <h1 className="text-6xl text-spotify-violet mb-4" style={{ textShadow: '0 10px 12px rgba(0, 0, 0, 0.8)' }}>
           artistFy
         </h1>
         <p className="text-xl text-gray-400 mb-2">
@@ -41,7 +52,8 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div className="relative z-10">
+      {/* Container com largura controlada */}
+      <div className="relative z-10 w-full max-w-2xl">
         <SearchBar onSearch={handleSearch} />
       </div>
 
